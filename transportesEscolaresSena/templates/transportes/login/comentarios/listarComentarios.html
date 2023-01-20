@@ -53,14 +53,17 @@
                     <td>{{t.cliente}}</td>
                     <td>{{t.tipo}}</td>
                     <td>{{t.desc}}</td>
+                    {% if request.session.logueo.2 == 'A' %}
                     <td>
                         <div class="d-grid gap-2 d-md-block">
                             <a class="btn btn-dark" href="{% url 'transportes:eliminarComentarios' t.id %}">Eliminar</a>
 
                             <a class="btn btn-info" href="{% url 'transportes:formularioEditarComentarios' t.id %}">Editar</a>
                         </div>
+
                     </td>
-                    
+                    {% endif %}
+
 
 
                 </tr>
